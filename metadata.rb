@@ -1,0 +1,7 @@
+name             'weave'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures weave'
+long_description 'Installs/Configures weave'
+version          '0.1.0'
