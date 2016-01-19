@@ -24,12 +24,6 @@ module WeaveCookbook
       ::File.join(weave_bin_prefix, weave_binary_name)
     end
 
-    # def systemd
-    #   o = shell_out('stat /proc/1/exe')
-    #   return true if o.stdout =~ /systemd/
-    #   false
-    # end
-
     def default_version
       'latest_release'
     end
@@ -41,14 +35,6 @@ module WeaveCookbook
     def weave_cmd_exists?
       return false unless ::File.exist?(weave_cmd)
       true
-    end
-
-    def svc_manager(&block)
-      case service_manager
-      when 'systemd'
-        svc = docker_service_manager_systemd(name, &block)
-      end
-      svc
     end
 
   end
