@@ -91,7 +91,7 @@ module WeaveCookbook
 
         cookbook_file "/tmp/nsenter_2.24.deb" do
           source "nsenter_2.24.deb"
-          mode 644
+          mode '0644'
           cookbook 'weave'
         end
 
