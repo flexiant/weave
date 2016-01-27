@@ -31,8 +31,8 @@ Actions
 - `:install`- Downloads weave binary to the default location.
 - `:docker_hook` - configures weave bridge and creates docker service configured to use it.
 - `:setup` - download weave docker images and configures the weave systemd service
-- `:start` - Start weave service (only it it exists already)
-- `:stop` - Stops weave service (only it it exists already)
+- `:start` - Start weave service (only if service exists already)
+- `:stop` - Stops weave service (only if service exists already)
 - `:restart` - Restarts the service
 
 Properties
