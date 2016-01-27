@@ -37,7 +37,7 @@ Actions
 
 Properties
 ----------
-- `ip`: ip CIDR assigned to the weave interface.
+- `ip`: ip CIDR assigned to the weave interface for this node.
 - `ip_alloc_range`: CIDR that defines the IP range to be assigned to containers in all nodes.
 - `subnet`: CIDR that defines the IP range to be assigned to containers in this node.
 - `password`: weave network password.
@@ -55,8 +55,9 @@ You will usually use the `weave_service` resource in your cookbooks to create th
 
 ```
 weave_service 'weave overlay docker' do
-  ip '10.2.0.0/16'
   ip_alloc_range '10.2.0.0/16'
+  ip '10.2.1.1/16'
+  subnet '10.2.1.2/24'
   is_master true
   docker_hook true
   password 'very.secret'
